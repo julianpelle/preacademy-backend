@@ -1,5 +1,7 @@
 package main;
 
+import main.models.Persona;
+
 public class Initial {
 
     public static void main(String[] args) {
@@ -12,6 +14,7 @@ public class Initial {
 
         // CONSIGNA 2:
         // Crear una clase llamada "Persona" dentro del path src/main.
+        /// ACA SUPOSE QUE EL PATH CORRECTO ERA SRC/MAIN/MODELS EN RELACION A LA CONSIGNA 1//
         // La clase debe tener los siguientes atributos privados:
         // - String nombre
         // - int edad
@@ -42,5 +45,32 @@ public class Initial {
         // TODO: ↓ Acá podés comenzar a resolver desde el main:
 
         // ¡A codear!
+
+        Persona persona1 = new Persona("Julian",21,"11111111");
+        Persona persona2 = new Persona("Mauro",21,"ABC11111");
+
+        persona1.mostrarInformacion();
+        persona2.mostrarInformacion();
+
+        persona1.setEdad(18);
+        persona2.setEdad(17);
+
+
+        persona1.mostrarInformacion();
+        persona2.mostrarInformacion();
+
+
+        if(persona1.esMayorDeEdad()){
+            System.out.println(persona1.getNombre() + " Es mayor de edad!");
+        }else {
+            System.out.println(persona1.getNombre() + " Es menor de edad!");
+        }
+
+
+        if(persona2.esMayorDeEdad()){
+            System.out.println(persona2.getNombre() + " Es mayor de edad!");
+        }else {
+            System.out.println(persona2.getNombre() + " Es menor de edad!");
+        }
     }
 }

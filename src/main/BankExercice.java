@@ -66,10 +66,12 @@ public class BankExercice {
             System.out.println(e.getMessage());
         }
         cajaDeAhorro1.retirar(300);
-
+        cajaDeAhorro1.mostrarSaldo();
+        Cuenta.transferir(cajaDeAhorro1,cuentaCorriente1,500);
         cajaDeAhorro1.mostrarSaldo();
 
         System.out.println("===================== \nCuenta corriente: ");
+        cuentaCorriente1.mostrarSaldo();
         cuentaCorriente1.depositar(300);
         cuentaCorriente1.retirar(1800);
         cuentaCorriente1.mostrarSaldo();
