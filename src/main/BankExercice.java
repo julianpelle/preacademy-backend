@@ -1,7 +1,12 @@
 package main;
 
+import main.Exception.SaldoInsuficienteException;
+import main.models.CajaAhorro;
+import main.models.Cuenta;
+import main.models.CuentaCorriente;
+
 public class BankExercice {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws SaldoInsuficienteException {
 
         // TODO: ¡Bienvenidos! Hoy van a programar para un banco en Java 😱
         // Este ejercicio les permitirá practicar herencia, encapsulamiento, métodos estáticos
@@ -48,6 +53,28 @@ public class BankExercice {
         // TODO: ↓ Acá podés comenzar a resolver desde el main:
 
         // ¡A programar!
+
+        CajaAhorro cajaDeAhorro1 = new CajaAhorro(1000,"ABC123)");
+        CuentaCorriente cuentaCorriente1 = new CuentaCorriente(500,"DEF123)");
+
+
+        System.out.println("===================== \nCaja de ahorro: ");
+        cajaDeAhorro1.depositar(300);
+        try{
+            cajaDeAhorro1.retirar(2300);
+        }catch (Exception e){
+            System.out.println(e.getMessage());
+        }
+        cajaDeAhorro1.retirar(300);
+
+        cajaDeAhorro1.mostrarSaldo();
+
+        System.out.println("===================== \nCuenta corriente: ");
+        cuentaCorriente1.depositar(300);
+        cuentaCorriente1.retirar(1800);
+        cuentaCorriente1.mostrarSaldo();
+        System.out.println("===================== \n");
+
     }
 }
 
