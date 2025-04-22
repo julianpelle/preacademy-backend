@@ -1,5 +1,9 @@
 package main;
 
+import main.models.Person;
+
+import java.time.LocalDate;
+
 public class PersonExercice {
     public static void main(String[] args) {
 
@@ -66,6 +70,38 @@ public class PersonExercice {
         // Llamar y probar todos los métodos de instancia desde aquí.
 
         // ¡A programar!
+
+        LocalDate fecha1 = LocalDate.of(2002,4,22);
+        LocalDate fecha2 = LocalDate.of(2004,1,26);
+
+        Person p1 = new Person("Maria",12356478,fecha1,"Perez");
+        p1.setAltura(1.60);
+        p1.setPeso(55);
+        p1.setEdad(14);
+
+        Person p2 = new Person("Juan","Doe",fecha2,12354678,"Masculino",115,1.60);
+        Person p3 = new Person(12345678);
+        System.out.println("==== \n" + p3.toString()+ "\n==== \n");
+        System.out.println("==== \n" + p2.toString()+ "\n==== \n");
+        System.out.println("==== \n" + p1.toString()+ "\n==== \n");
+
+        System.out.println(p2.getNombre() +" indice de masa corporal: "+ p2.obtenerIMC()+ " | "+ p1.getNombre() +" indice de masa corporal: "+ +p1.obtenerIMC());
+
+        System.out.println(p2.getNombre() +(p2.estaEnForma() ? " esta en forma ":" no esta en forma ")+ " | "+ p1.getNombre() +(p1.estaEnForma() ? " esta en forma ":" no esta en forma "));
+
+        System.out.println(p2.getNombre() +(p2.esCumpleaños() ? " es su cumpleaños ":" no es su cumpleaños ")+ " | "+ p1.getNombre() +(p1.esCumpleaños() ? " es su cumpleaños ":" no es su cumpleaños "));
+
+        // CONSIGNA 9:
+        // Agregar método que indique si la persona es mayor de edad (retorna true si tiene más de 18 años).
+        System.out.println(p2.getNombre() +(p2.esMayor() ? " es mayor de edad ":" no es mayor de edad ")+ " | "+ p1.getNombre() +(p1.esMayor() ? " es mayor de edad ":" no es mayor de edad "));
+
+        System.out.println(p2.getNombre() +(p2.puedeVotar() ? " puede votar ":" no puede votar ")+ " | "+ p1.getNombre() +(p1.puedeVotar() ? " puede votar ":" no puede votar "));
+
+
+
+
+        System.out.println(p2.getNombre() +(p2.edadCorrecta() ? " la edad es correcta ":" la edad es incorrecta ")+ " | "+ p1.getNombre() +(p1.edadCorrecta() ? " la edad es correcta ":" la edad es incorrecta "));
+
     }
 }
 

@@ -1,5 +1,9 @@
 package main;
 
+import main.models.Electrodomestico;
+
+import java.text.DecimalFormat;
+
 public class ElectrodomesticExercice {
     public static void main(String[] args) {
 
@@ -48,6 +52,22 @@ public class ElectrodomesticExercice {
         // Mostrar los resultados por consola.
 
         // ¡Éxitos!
+
+        Electrodomestico lavarropa = new Electrodomestico("Lavarropas dream",1000000,"Gris",20,25.5);
+        Electrodomestico heladera = new Electrodomestico("Heladera Samsung",70,"Blanco",50,35);
+        //valores para mostrar los resultados de los metodos
+        Electrodomestico elecdefault = new Electrodomestico();
+
+        System.out.println(elecdefault.toString());
+
+        DecimalFormat df = new DecimalFormat("#.00");
+
+        System.out.println("Balance del lavarropa: "+ df.format(lavarropa.calcularBalance()) + " Balance de la heladera: "+ df.format(heladera.calcularBalance()) );
+        System.out.println("Consumo del lavarropa: "+ (lavarropa.esBajoConsumo() ? "Es bajo consumo" : "Es alto consumo") + " Consumo de la heladera: "+ (heladera.esBajoConsumo() ? "Es bajo consumo" : "Es alto consumo"));
+        System.out.println("Gama del lavarropa: "+ (lavarropa.esGamaAlta() ? "Es gama alta" : "Es gama baja")+ " Gama de la heladera: "+ (heladera.esGamaAlta() ? "Es gama alta" : "Es gama baja"));
+
+
+
     }
 }
 

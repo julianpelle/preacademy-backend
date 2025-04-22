@@ -18,8 +18,8 @@ public class Person {
     public Person(String nombre,String apellido, LocalDate fechaNacimiento, int dni, String sexo, double peso, double altura) {
         this.nombre = nombre;
         this.apellido=apellido;
-        this.edad = this.ObtenerEdad();
         this.fechaNacimiento = fechaNacimiento;
+        this.edad = this.ObtenerEdad();
         this.dni = dni;
         this.sexo = sexo;
         this.peso = peso;
@@ -29,8 +29,8 @@ public class Person {
     public Person(int dni) {
         this.nombre = "N";
         this.apellido="A";
-        this.edad = this.ObtenerEdad();
         this.fechaNacimiento = LocalDate.of(2000, 1, 1);
+        this.edad = this.ObtenerEdad();
         this.dni = dni;
         this.sexo = "F";
         this.peso = 1;
@@ -42,8 +42,8 @@ public class Person {
         this.dni = dni;
         this.nombre = nombre;
         this.apellido = apellido;
-        this.edad = this.ObtenerEdad();
         this.fechaNacimiento = LocalDate.of(2000, 1, 1);
+        this.edad = this.ObtenerEdad();
         this.sexo = "F";
         this.peso = 1;
         this.altura = 1;
@@ -140,7 +140,8 @@ public class Person {
     }
 
     public boolean esCumpleaños(){
-        return this.fechaNacimiento.equals(LocalDate.now());
+
+        return (this.fechaNacimiento.getMonth().equals(LocalDate.now().getMonth()) && this.fechaNacimiento.getDayOfMonth() == LocalDate.now().getDayOfMonth());
     }
 
     public boolean esMayor(){
@@ -158,8 +159,8 @@ public class Person {
     @Override
     public String toString() {
         return "Datos de: "+this.nombre +" "+ this.apellido
-                +"\n DNI: " + this.dni + " Fecha de nacimiento: " + this.fechaNacimiento + " Edad: "+this.edad
-                + "Sexo: "+ this.sexo + "\n Altura: "+this.altura+"m, Peso: "+this.peso+"kg";
+                +"\nDNI: " + this.dni + " Fecha de nacimiento: " + this.fechaNacimiento + " Edad: "+this.edad
+                + " Sexo: "+ this.sexo + "\nAltura: "+this.altura+"m, Peso: "+this.peso+"kg";
     }
 
 
