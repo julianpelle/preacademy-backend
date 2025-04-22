@@ -18,6 +18,7 @@ A continuación, respondé estas preguntas directamente por escrito, debajo de c
 4. ¿Qué función cumple el método `main()` en una aplicación Java?
 5. ¿Qué diferencias notás entre Java y otros lenguajes que hayas usado anteriormente? (por ejemplo Python, JavaScript, etc.)
 
+
 ---
 
 ## 🔹 Preguntas sobre Programación Orientada a Objetos (POO)
@@ -27,6 +28,7 @@ A continuación, respondé estas preguntas directamente por escrito, debajo de c
 8. ¿Qué es un **constructor** y para qué se usa?
 9. ¿Podés explicar con tus palabras qué es un **método** y cómo se relaciona con los objetos?
 10. ¿Cuál es el beneficio de tener más de una clase en un programa?
+
 
 ---
 
