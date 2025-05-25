@@ -24,6 +24,16 @@ private int calificacion;
     }
 
 
+    public Episodio titulo(String value){
+        this.titulo = value;
+        return this;
+    }
+    public Episodio calificacion(int value){
+        this.calificacion = value;
+        return this;
+    }
+
+
 
     public Episodio() {
     }
